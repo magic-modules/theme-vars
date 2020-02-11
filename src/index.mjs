@@ -32,10 +32,7 @@ export const View = vars => {
         .map(e => Color(e)),
     ),
 
-    maxWidth && [
-      h4('max page width'),
-      p(['vars.maxWidth: ', maxWidth]),
-    ],
+    maxWidth && [h4('max page width'), p(['vars.maxWidth: ', maxWidth])],
 
     fadeDuration && [
       h4('fade duration:'),
