@@ -4,7 +4,7 @@
   "author": "Wizards & Witches",
   "homepage": "https://magic-modules.github.io/theme-vars",
   "license": "AGPL-3.0",
-  "description": "@magic theme-vars module. shows the THEME_VARS exported from a @magic-theme.",
+  "description": "@magic ThemeVars module. shows the THEME_VARS exported from a @magic-theme.",
   "main": "src/index.mjs",
   "module": "src/index.mjs",
   "type": "module",
