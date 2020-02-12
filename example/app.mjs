@@ -13,17 +13,20 @@ export const state = {
       dark: '#232323',
       light: '#eeeeee',
     },
-    text: {
-      dark: '#cccccc',
-      light: '#232323',
-    },
+
     link: {
       dark: '#eeeeee',
       light: '#010101',
+
       hover: {
         dark: '#fefefe',
         light: '#010101',
       },
+    },
+
+    text: {
+      dark: '#cccccc',
+      light: '#232323',
     },
 
     fadeDuration: '300ms',
