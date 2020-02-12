@@ -2,7 +2,8 @@
 this is the [@magic-modules][magic-module-url]
 ThemeVars component.
 
-shows a list with the THEME_VARS, will usually only be used in a @magic-theme.
+shows a list with the THEME_VARS,
+will usually only be used in a @magic-theme documentation page.
 
 more documentation and example:
 [html docs][doc-url]
@@ -22,7 +23,7 @@ npm install @magic-modules/theme-vars
 ### <a name="usage"></a>usage
 in a page or module View
 ```javascript
-export const View = state => ThemeVars(state)
+export const View = state => ThemeVars(state.vars)
 ```
 
 ### changelog
