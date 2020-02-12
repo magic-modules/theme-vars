@@ -1,4 +1,4 @@
-export const Color = ([name, value], parent = '') => {
+export const ThemeVarColor = ([name, value], parent = '') => {
   const par = parent ? `${parent}.` : ''
 
   if (typeof value === 'string') {
@@ -10,7 +10,10 @@ export const Color = ([name, value], parent = '') => {
   }
 
   if (typeof value === 'object') {
-    return li([h5(`${par}${name}`), ul(Object.entries(value).map(e => Color(e, `${par}${name}`)))])
+    return li([
+      h5(`${par}${name}`),
+      ul(Object.entries(value).map(e => ThemeVarColor(e, `${par}${name}`))),
+    ])
   }
 }
 
@@ -23,13 +26,13 @@ export const View = vars => {
     h3({ id: 'theme-vars' }, 'theme vars'),
 
     h4('colors'),
-    p('@magic-themes/docs exports and uses the following colors.'),
+    p('this theme exports and uses the following colors.'),
 
     ul(
       Object.entries(colors)
         .sort(([n], [n2]) => (n > n2 ? 1 : -1))
         .sort(([_, v]) => (typeof v === 'string' ? -1 : 1))
-        .map(e => Color(e)),
+        .map(e => ThemeVarColor(e)),
     ),
 
     maxWidth && [h4('max page width'), p(['vars.maxWidth: ', maxWidth])],
