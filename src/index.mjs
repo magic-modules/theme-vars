@@ -1,26 +1,32 @@
-export const ThemeVarColor = ([name, value], parent = '') => {
-  const par = parent ? `${parent}.` : ''
-
-  if (typeof value === 'string') {
-    return li([
-      `vars.${par}${name}`,
-      ': ',
-      span({ class: 'Bg', style: `background-color: ${value}` }, value),
-    ])
-  }
-
-  if (typeof value === 'object') {
-    return li([
-      h5(`${par}${name}`),
-      ul(Object.entries(value).map(e => ThemeVarColor(e, `${par}${name}`))),
-    ])
-  }
-}
-
 export const View = vars => {
   CHECK_PROPS(vars, propTypes, 'ThemeVars')
 
   const { widths, maxWidth, fadeDuration, ...colors } = vars
+
+  const sortByName = ([n], [n2]) => n > n2 ? 1 : -1
+  const sortByValue = ([_, v]) => typeof v === 'string' ? -1 : 1
+
+  const Color = ([name, value], parent = '') => {
+    const par = parent ? `${parent}.` : ''
+
+    if (typeof value === 'string') {
+      return li([
+        `vars.${par}${name}`,
+        ': ',
+        span({ class: 'Bg', style: { backgroundColor: value } }, value),
+      ])
+    }
+
+    if (typeof value === 'object') {
+      return li([
+        h5(`${par}${name}`),
+        ul(Object.entries(value)
+          .sort(sortByName)
+          .sort(sortByValue)
+          .map(e => Color(e, `${par}${name}`))),
+      ])
+    }
+  }
 
   return div({ class: 'ThemeVars' }, [
     h3({ id: 'theme-vars' }, 'theme vars'),
@@ -30,9 +36,9 @@ export const View = vars => {
 
     ul(
       Object.entries(colors)
-        .sort(([n], [n2]) => (n > n2 ? 1 : -1))
-        .sort(([_, v]) => (typeof v === 'string' ? -1 : 1))
-        .map(e => ThemeVarColor(e)),
+        .sort(sortByName)
+        .sort(sortByValue)
+        .map(e => Color(e)),
     ),
 
     maxWidth && [h4('max page width'), p(['vars.maxWidth: ', maxWidth])],
@@ -56,7 +62,7 @@ export const View = vars => {
   ])
 }
 
-export const style = vars => ({
+export const style = {
   ul: {
     display: 'inline-block',
     width: '270px',
@@ -76,7 +82,7 @@ export const style = vars => ({
     textAlign: 'right',
     width: '75px',
   },
-})
+}
 
 export const propTypes = {
   ThemeVars: [
