@@ -31,7 +31,11 @@ export const View = state => ThemeVars(state.vars)
 ##### 0.0.1
 first release
 
-##### 0.0.2 - unreleased
+##### 0.0.2
+* change text to remove fixed reference to @magic-themes/docs.
+* rename Color to ThemeVarColor to avoid nameclashes in the future
+
+##### 0.0.3 - unreleased
 ...
 
 [magic-module-url]: https://github.com/magic-modules/
