@@ -7,6 +7,7 @@ export const state = {
     { to: '/#usage', text: 'usage' },
     { to: '/#source', text: 'source' },
   ],
+
   vars: {
     background: {
       dark: '#232323',
@@ -24,7 +25,9 @@ export const state = {
         light: '#010101',
       },
     },
+
     fadeDuration: '300ms',
+
     widths: {
       laptop: '1000px',
     },
