@@ -1,4 +1,4 @@
-export const View = vars => {
+export const View = ({ vars }) => {
   CHECK_PROPS(vars, propTypes, 'ThemeVars')
 
   const { widths, maxWidth, fadeDuration, ...colors } = vars
@@ -65,7 +65,7 @@ export const View = vars => {
 export const style = {
   ul: {
     display: 'inline-block',
-    width: '270px',
+    width: '400px',
   },
 
   li: {
@@ -80,7 +80,7 @@ export const style = {
     float: 'right',
     padding: '0.1em',
     textAlign: 'right',
-    width: '75px',
+    width: '130px',
   },
 }
 
