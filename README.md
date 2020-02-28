@@ -35,10 +35,13 @@ first release
 * change text to remove fixed reference to @magic-themes/docs.
 * rename Color to ThemeVarColor to avoid nameclashes in the future
 
-##### 0.0.3 
+##### 0.0.3
 fix: Color is inside ThemeVars module until @magic can import it
 
-##### 0.0.4 - unreleased
+##### 0.0.4
+expect the full state as props, not just state.vars
+
+##### 0.0.5 - unreleased
 ...
 
 [magic-module-url]: https://github.com/magic-modules/
