@@ -3,8 +3,8 @@ export const View = ({ vars }) => {
 
   const { widths, maxWidth, fadeDuration, ...colors } = vars
 
-  const sortByName = ([n], [n2]) => n > n2 ? 1 : -1
-  const sortByValue = ([_, v]) => typeof v === 'string' ? -1 : 1
+  const sortByName = ([n], [n2]) => (n > n2 ? 1 : -1)
+  const sortByValue = ([_, v]) => (typeof v === 'string' ? -1 : 1)
 
   const Color = ([name, value], parent = '') => {
     const par = parent ? `${parent}.` : ''
@@ -20,18 +20,20 @@ export const View = ({ vars }) => {
     if (typeof value === 'object') {
       return li([
         h5(`${par}${name}`),
-        ul(Object.entries(value)
-          .sort(sortByName)
-          .sort(sortByValue)
-          .map(e => Color(e, `${par}${name}`))),
+        ul(
+          Object.entries(value)
+            .sort(sortByName)
+            .sort(sortByValue)
+            .map(e => Color(e, `${par}${name}`)),
+        ),
       ])
     }
   }
 
   return div({ class: 'ThemeVars' }, [
-    h3({ id: 'theme-vars' }, 'theme vars'),
+    h2({ id: 'theme-vars' }, 'theme vars'),
 
-    h4('colors'),
+    h3('colors'),
     p('this theme exports and uses the following colors.'),
 
     ul(
@@ -44,13 +46,13 @@ export const View = ({ vars }) => {
     maxWidth && [h4('max page width'), p(['vars.maxWidth: ', maxWidth])],
 
     fadeDuration && [
-      h4('fade duration:'),
+      h3('fade duration:'),
       p('vars.fadeDuration should be used for all css animations'),
       p(['vars.fadeDuration: ', fadeDuration]),
     ],
 
     widths && [
-      h4('breakpoints'),
+      h3('breakpoints'),
       p('the following width breakpoints exist'),
       ul(
         Object.entries(widths)
@@ -59,6 +61,20 @@ export const View = ({ vars }) => {
           .map(([name, value]) => li([`vars.widths.${name}`, ': ', value])),
       ),
     ],
+
+    h3('headers'),
+    p('the five header sizes look like the following:'),
+
+    h1('This is a h1'),
+    h2('This is a h2'),
+    h3('This is a h3'),
+    h4('This is a h4'),
+    h5('This is a h5'),
+
+    h3('links'),
+    p('links will look like the following:'),
+
+    Link({ to: '' }, 'This is a link'),
   ])
 }
 
