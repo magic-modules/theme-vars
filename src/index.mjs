@@ -1,4 +1,6 @@
-export const View = ({ vars }) => {
+export const View = ({ state }) => {
+  const { vars } = state
+
   CHECK_PROPS(vars, propTypes, 'ThemeVars')
 
   const { widths, maxWidth, fadeDuration, ...colors } = vars
