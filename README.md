@@ -45,7 +45,10 @@ expect the full state as props, not just state.vars
 * add header demos (h1 - h5)
 * add link demo
 
-##### 0.0.6 - unreleased
+##### 0.0.6
+magic 0.0.55+ passes state differently
+
+##### 0.0.7 - unreleased
 ...
 
 [magic-module-url]: https://github.com/magic-modules/
