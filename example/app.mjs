@@ -2,9 +2,11 @@ export const state = {
   title: '@magic-modules/theme-vars',
   description: 'embed a list of the theme vars on a @magic-theme demo page.',
   logotext: 'ThemeVars',
+
   menu: [
     { to: '/#installation', text: 'installation' },
     { to: '/#usage', text: 'usage' },
+    { to: '/#demo', text: 'demo' },
     { to: '/#source', text: 'source' },
   ],
 
