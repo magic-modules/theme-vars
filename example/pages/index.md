@@ -6,7 +6,7 @@ ThemeVars component.
 
 ${state.description}
 
-<GitBadges>magic-modules/theme-vars</GitBadges>
+<GitBadges>@magic-modules/theme-vars</GitBadges>
 
 ## installation
 
