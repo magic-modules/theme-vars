@@ -48,7 +48,10 @@ expect the full state as props, not just state.vars
 ##### 0.0.6
 magic 0.0.55+ passes state differently
 
-##### 0.0.7 - unreleased
+##### 0.0.7
+bump required node version to 14.2.0
+
+##### 0.0.8 - unreleased
 ...
 
 [magic-module-url]: https://github.com/magic-modules/
