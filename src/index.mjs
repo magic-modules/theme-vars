@@ -83,7 +83,7 @@ export const View = ({ state }) => {
 export const style = {
   ul: {
     display: 'inline-block',
-    width: '400px',
+    maxWidth: '400px',
   },
 
   li: {
