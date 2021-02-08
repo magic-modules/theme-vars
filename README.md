@@ -54,7 +54,10 @@ bump required node version to 14.2.0
 ##### 0.0.8 
 bump required node version to 14.15.4
 
-##### 0.0.9 - unreleased
+##### 0.0.9 
+* container width of 400px turns into max-width
+
+##### 0.0.10 - unreleased
 ...
 
 [magic-module-url]: https://github.com/magic-modules/
