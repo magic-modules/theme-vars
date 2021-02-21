@@ -76,7 +76,7 @@ export const View = ({ state }) => {
     h3('links'),
     p('links will look like the following:'),
 
-    Link({ to: '' }, 'This is a link'),
+    Link({ to: '/' }, 'This is a link'),
   ])
 }
 
