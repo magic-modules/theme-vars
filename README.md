@@ -61,7 +61,8 @@ bump required node version to 14.15.4
 fix link example, replace to: '' with to: '/'
  
 ##### 0.0.11
-add outlines to h1-h5 examples
+* add outlines to h1-h5 examples
+* add demo section links to example
 
 ##### 0.0.12 - unreleased
 ...
