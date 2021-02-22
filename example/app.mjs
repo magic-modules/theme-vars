@@ -6,7 +6,14 @@ export const state = {
   menu: [
     { to: '/#installation', text: 'installation' },
     { to: '/#usage', text: 'usage' },
-    { to: '/#demo', text: 'demo' },
+    {
+      to: '/#demo', text: 'demo', items: [
+        { to: '-colors', text: 'colors' },
+        { to: '-breakpoints', text: 'breakpoints' },
+        { to: '-headers', text: 'headers' },
+        { to: '-links', text: 'links' },
+      ]
+    },
     { to: '/#source', text: 'source' },
   ],
 

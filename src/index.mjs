@@ -35,7 +35,7 @@ export const View = ({ state }) => {
   return div({ class: 'ThemeVars' }, [
     h2({ id: 'theme-vars' }, 'theme vars'),
 
-    h3('colors'),
+    h3({ id: 'demo-colors' }, 'colors'),
     p('this theme exports and uses the following colors.'),
 
     ul(
@@ -54,7 +54,7 @@ export const View = ({ state }) => {
     ],
 
     widths && [
-      h3('breakpoints'),
+      h3({ id: 'demo-breakpoints' }, 'breakpoints'),
       p('the following width breakpoints exist'),
       ul(
         Object.entries(widths)
@@ -64,7 +64,7 @@ export const View = ({ state }) => {
       ),
     ],
 
-    h3('headers'),
+    h3({ id: 'demo-headers' }, 'headers'),
 
     p('the five header sizes look like the following, the outlines indicate their padding.'),
 
@@ -74,7 +74,7 @@ export const View = ({ state }) => {
     h4({ class: 'header-example' }, 'This is a h4'),
     h5({ class: 'header-example' }, 'This is a h5'),
 
-    h3('links'),
+    h3({ id: 'demo-links' }, 'links'),
     p('links will look like the following:'),
 
     Link({ to: '/' }, 'This is a link'),
