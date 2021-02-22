@@ -1,7 +1,12 @@
 import { is } from '@magic/test'
-import * as Hero from '../src/index.mjs'
+import * as ThemeVars from '../src/index.mjs'
 
 export default [
-  { fn: () => Hero.View, expect: is.function, info: 'expect Hero.View to be a function' },
-  { fn: () => Hero, expect: is.object, info: 'expect Hero to be an object' },
+  { fn: () => ThemeVars.View, expect: is.function, info: 'expect ThemeVars.View to be a function' },
+  { fn: () => ThemeVars, expect: is.object, info: 'expect ThemeVars to be an object' },
+  {
+    fn: () => ThemeVars.style,
+    expect: is.objectNative,
+    info: 'expect ThemeVars.style to be an object',
+  },
 ]
