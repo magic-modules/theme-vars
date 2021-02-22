@@ -65,13 +65,14 @@ export const View = ({ state }) => {
     ],
 
     h3('headers'),
-    p('the five header sizes look like the following:'),
 
-    h1('This is a h1'),
-    h2('This is a h2'),
-    h3('This is a h3'),
-    h4('This is a h4'),
-    h5('This is a h5'),
+    p('the five header sizes look like the following, the outlines indicate their padding.'),
+
+    h1({ class: 'header-example' }, 'This is a h1'),
+    h2({ class: 'header-example' }, 'This is a h2'),
+    h3({ class: 'header-example' }, 'This is a h3'),
+    h4({ class: 'header-example' }, 'This is a h4'),
+    h5({ class: 'header-example' }, 'This is a h5'),
 
     h3('links'),
     p('links will look like the following:'),
@@ -99,6 +100,11 @@ export const style = {
     padding: '0.1em',
     textAlign: 'right',
     width: '130px',
+  },
+
+  '.header-example': {
+    outline: '1px dashed',
+    margin: '0 0 0.5em',
   },
 }
 
