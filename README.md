@@ -64,7 +64,10 @@ fix link example, replace to: '' with to: '/'
 * add outlines to h1-h5 examples
 * add demo section links to example
 
-##### 0.0.12 - unreleased
+##### 0.0.12
+* accept both state.state as well as state as argument.
+
+##### 0.0.13 - unreleased
 ...
 
 [magic-module-url]: https://github.com/magic-modules/
