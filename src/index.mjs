@@ -1,5 +1,5 @@
-export const View = ({ state }) => {
-  const { vars } = state
+export const View = state => {
+  const { vars } = state.state || state
 
   CHECK_PROPS(vars, propTypes, 'ThemeVars')
 
